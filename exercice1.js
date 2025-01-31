@@ -36,7 +36,7 @@ questionContainer.addEventListener("click" , () =>{
 
     questionContainer.classList.toggle("questionClick");
     // execution de la fonction
-    ring();
+  //  ring();
     
 });
 
@@ -49,3 +49,53 @@ btn2.addEventListener("click" , () =>{
     reponse.classList.toggle("show-response")
     reponse.style.background = "pink";
 });
+
+//--------------------------------------------------------------------------------------------
+
+// evenement mousemove
+// nous allons créer un effet sur la souris une sorte de rond qui suivras les mouvements de la souris
+
+const move = document.querySelector(".mousemove");
+//console.log(move);
+move.classList.add("mousemove2");
+  // console.log(move);
+
+//   move.addEventListener("click", () =>{
+//     console.log("click !!!");
+    
+// });
+   
+   
+window.addEventListener("mousemove", (e) =>{
+    // console.log(e);
+    move.style.left = e.pageX + "px";
+    move.style.top = e.pageY + "px";
+});
+
+reponse.addEventListener("mouseover", () =>{
+    reponse.style.transform = "rotate(2deg) important";
+    
+});
+
+    
+// maintenant le rond suit bien la souris a chaque mouvement
+// mais il faudrait le centrer
+// pour cela nous allons sur notre fichier css ajouter les modifications
+
+const news = document.getElementById("new");
+console.log(news);
+news.classList.add("new1");
+console.log(news);
+
+news.addEventListener("click", () =>{
+    news.style.background = "pink";
+    
+});
+
+
+
+
+
+
+
+
